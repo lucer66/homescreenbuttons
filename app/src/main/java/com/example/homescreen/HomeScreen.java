@@ -17,7 +17,7 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.homescreen);
         String[] values = new String[]{
                 "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies", "Item6", "Item7"
+                "Creative Media and Game Technologies", "Item66", "Item7"
         };
 
         ArrayAdapter<String> itemsAdapter =
