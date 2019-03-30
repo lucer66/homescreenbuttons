@@ -13,6 +13,7 @@ import java.util.Date;
 public class InformaticaOpendag extends AppCompatActivity {
 Button copen;
 Button share;
+Button question;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,13 +58,16 @@ Button share;
                 intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
                 intent.putExtra("title", "Openday");
                 startActivity(intent);
-
-
-
-
             }
         });
+        question = findViewById(R.id.Questions);
+        question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(InformaticaOpendag.this, questionform.class ));
             }
+        });
+    }
         }
 
 
