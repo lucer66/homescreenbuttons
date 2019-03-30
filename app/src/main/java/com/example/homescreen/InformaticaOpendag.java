@@ -1,6 +1,8 @@
 package com.example.homescreen;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,14 +38,13 @@ Button question;
         copen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long startTime;
 
-                long startTime,endTime;
-
-                String startDate = "2019-01-05";
+                String startDate = "2019-01-05-13-15";
                 Calendar cal = Calendar.getInstance();
 
                 try{
-                    Date date = new SimpleDateFormat("yyyy-MM-dd").parse(startDate);
+                    Date date = new SimpleDateFormat("yyyy-MM-dd-HH-mm").parse(startDate);
                     startTime = date.getTime();
                 }
 
@@ -51,13 +52,17 @@ Button question;
                     startTime = cal.getTimeInMillis();
                 }
 
+
                 Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("beginTime", startTime);
-                intent.putExtra("allDay", true);
-                intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
+                intent.putExtra("allDay", false);
                 intent.putExtra("title", "Openday");
+                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Rotterdam, Wijnhaven 107");
+                String endDate = startDate + 1000 * 60 * 60;
                 startActivity(intent);
+
+
             }
         });
         question = findViewById(R.id.Questions);
