@@ -16,8 +16,10 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homescreen);
         String[] values = new String[]{
-                "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies", "Item66", "Item7"
+                "Informatica  03-12-18", "Technische informatica  03-12-18", "Communicatie", "Communication and Multimedia Design",
+                "Creative Media and Game Technologies", "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
+                "Creative Media and Game Technologies", "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
+                "Creative Media and Game Technologies"
         };
 
         ArrayAdapter<String> itemsAdapter =
@@ -36,6 +38,59 @@ public class HomeScreen extends AppCompatActivity {
                 Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
                 startActivityForResult(myIntent,0);
                 }
+                if (position==2) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==3) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==4) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==5) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==6) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==7) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==8) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==9) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==10) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==11) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==12) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==13) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+                if (position==14) {
+                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+
             }
         });
 
