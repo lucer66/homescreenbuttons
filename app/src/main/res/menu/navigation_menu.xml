@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id= "@+id/myprofile"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp">
+
+    </item>
+    <item
+        android:id= "@+id/mysettings"
+        android:title="Studies"
+        android:icon="@drawable/ic_list_black_24dp">
+
+    </item>
+
+    <item
+        android:id= "@+id/myedit"
+        android:title="Institute"
+        android:icon="@drawable/ic_school_black_24dp">
+
+    </item>
+    <item
+        android:id= "@+id/mysocial"
+        android:title="Contact"
+        android:icon="@drawable/ic_mail_black_24dp">
+
+    </item>
+
+
+
+
+
+</menu>
