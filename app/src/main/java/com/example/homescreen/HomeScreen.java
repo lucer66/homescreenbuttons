@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class HomeScreen extends AppCompatActivity {
+public class  HomeScreen extends AppCompatActivity {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
@@ -79,15 +79,15 @@ public class HomeScreen extends AppCompatActivity {
                     startActivityForResult(myIntent,0);
                 }
                 if (position==2) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), Communicatie1.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==3) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), CMD1.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==4) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), CreativeMGT1.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==5) {
