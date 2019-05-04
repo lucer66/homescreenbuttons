@@ -45,7 +45,7 @@ public class  HomeScreen extends AppCompatActivity {
                 }
                 if ( id == R.id.mysettings)
                 {
-                    Intent myIntent = new Intent(nav_view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
                     startActivityForResult(myIntent,0);
                 }
                 if ( id == R.id.myedit)
