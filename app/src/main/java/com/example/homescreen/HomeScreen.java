@@ -32,7 +32,7 @@ public class  HomeScreen extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
+        final NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
 
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -40,15 +40,23 @@ public class  HomeScreen extends AppCompatActivity {
                 int id = menuItem.getItemId();
                 if ( id == R.id.myprofile)
                 {
-                    Toast.makeText(HomeScreen.this , "MyProfile", Toast.LENGTH_SHORT).show();
+                    Intent myIntent = new Intent(nav_view.getContext(), HomeScreen.class);
+                    startActivityForResult(myIntent,0);;
                 }
                 if ( id == R.id.mysettings)
                 {
-                    Toast.makeText(HomeScreen.this , "Settings", Toast.LENGTH_SHORT).show();
+                    Intent myIntent = new Intent(nav_view.getContext(), TechnInform1.class);
+                    startActivityForResult(myIntent,0);
                 }
                 if ( id == R.id.myedit)
                 {
-                    Toast.makeText(HomeScreen.this , "Edit", Toast.LENGTH_SHORT).show();
+                    Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
+                    startActivityForResult(myIntent,0);
+                }
+                if ( id == R.id.mysocial)
+                {
+                    Intent myIntent = new Intent(nav_view.getContext(), questionform.class);
+                    startActivityForResult(myIntent,0);
                 }
 
                 return true;
