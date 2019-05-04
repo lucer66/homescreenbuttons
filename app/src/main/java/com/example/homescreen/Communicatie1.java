@@ -12,14 +12,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class TechnInform1 extends AppCompatActivity {
+public class Communicatie1 extends AppCompatActivity {
     Button copen;
     Button share;
     Button question;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.techinform1);
+        setContentView(R.layout.communicatie1);
 
         share = findViewById(R.id.ShareIt);
         share.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +69,7 @@ public class TechnInform1 extends AppCompatActivity {
         question.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TechnInform1.this, questionform.class ));
+                startActivity(new Intent(Communicatie1.this, questionform.class ));
             }
         });
     }
