@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".questionform"></activity>
+        <activity android:name=".CommunicationPage"></activity>
+        <activity android:name=".TechInformaticaPage" />
+        <activity android:name=".InformaticaPage" />
+        <activity android:name=".questionform" />
         <activity android:name=".QuestionForm" />
         <activity android:name=".TechnInform1" />
         <activity android:name=".InformaticaOpendag" />
