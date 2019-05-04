@@ -82,7 +82,7 @@
 
 
         android:background="@android:color/white"
-        ></View>
+        />
 
     <View
         android:id="@+id/view"
@@ -90,7 +90,7 @@
         android:layout_height="3dp"
         android:layout_below="@+id/techinformaticaClick"
         android:background="@android:color/white"
-        ></View>
+        />
 
     <View
         android:id="@+id/view2"
@@ -99,7 +99,7 @@
         android:layout_height="3dp"
         android:layout_below="@+id/communicationClick"
         android:background="@android:color/white"
-        ></View>
+        />
 
 
 

@@ -1,7 +1,6 @@
 package com.example.homescreen;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -10,10 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.Button;
 
 public class  HomeScreen extends AppCompatActivity {
 
@@ -23,6 +19,7 @@ public class  HomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homescreen);
+
         dl = (DrawerLayout)findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
@@ -30,7 +27,41 @@ public class  HomeScreen extends AppCompatActivity {
         dl.addDrawerListener(abdt);
         abdt.syncState();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Button InformButton = findViewById(R.id.InformClick);
+        InformButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openpage1();
+            }
+        });
+
+
+        Button TechButton = findViewById(R.id.TechClick);
+        TechButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openpage2();
+            }
+        });
+
+
+        Button CreativeButton = findViewById(R.id.CreativeClick);
+        CreativeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openpage3();
+            }
+        });
+
+        Button CMDButton = findViewById(R.id.cmdClick);
+        CMDButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openpage4();
+            }
+        });
 
         final NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
 
@@ -63,85 +94,26 @@ public class  HomeScreen extends AppCompatActivity {
             }
         });
 
-        String[] values = new String[]{
-                "Informatica  03-12-18", "Technische informatica  03-12-18", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies", "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies", "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies"
-        };
+    }
 
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
-        final ListView listView = (ListView) findViewById(R.id.mylist);
-        listView.setAdapter(itemsAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    private void openpage4() {
+        Intent intent4 = new Intent(this, CMD1.class);
+        startActivity(intent4);
+    }
 
-                if(position==0){
-                    Intent myIntent = new Intent(view.getContext(), InformaticaOpendag.class);
-                    startActivityForResult(myIntent, 0 );
-                }
-                if (position==1){
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent,0);
-                }
-                if (position==2) {
-                    Intent myIntent = new Intent(view.getContext(), Communicatie1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==3) {
-                    Intent myIntent = new Intent(view.getContext(), CMD1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==4) {
-                    Intent myIntent = new Intent(view.getContext(), CreativeMGT1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==5) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==6) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==7) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==8) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==9) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==10) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==11) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==12) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==13) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if (position==14) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
-                    startActivityForResult(myIntent, 0);
-                }
+    private void openpage3() {
+        Intent intent3 = new Intent(this, CreativeMGT1.class);
+        startActivity(intent3);
+    }
 
-            }
-        });
+    private void openpage2() {
+        Intent intent2 = new Intent(this, TechnInform1.class);
+        startActivity(intent2);
+    }
 
+    public void openpage1() {
+        Intent intent1 = new Intent(this, InformaticaOpendag.class);
+        startActivity(intent1);
     }
 
     @Override
